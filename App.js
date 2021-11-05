@@ -11,7 +11,7 @@ import {
   Alert,
 } from "react-native";
 
-const curencyPerCndDollar = {
+const currencyPerCndDollar = {
   AUSDOLLAR: 1.07,
   REAL: 4.54,
   RENMINBI: 5.18,
@@ -39,7 +39,7 @@ class App extends Component {
     if (this.state.inputValue === "") {
       Alert.alert("Enter some Value");
     }
-    let result = parseFloat(this.state.inputValue) * curencyPerCndDollar[currency];
+    let result = parseFloat(this.state.inputValue) * currencyPerCndDollar[currency];
 
     this.setState({resultValue: result.toFixed(2)})
   };
